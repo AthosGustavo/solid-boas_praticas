@@ -8,7 +8,7 @@
 
 ### REMOVENDO DUPLICAÇÃO DO CÓDIGO
 
-Dentro de todas as funções que fazem requisições GET, existe uma duplicação de código e essa duplicação de código pode ser resolvida através de uma função que irá encapsular esse código.
+Dentro de todas as funções que fazem requisições GET, existe uma duplicação de código e essa duplicação pode ser resolvida através de uma função que irá encapsular esse código e pode ser reutilizada em métodos GET.
 
 #### Código duplicado
 ```java
