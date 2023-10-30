@@ -6,7 +6,7 @@
  - listarPetsDoAbrigo(requisicao get)
  - importarPetsDoAbrigo
 
-### REMOVENDO DUPLICAÇÃO DO CÓDIGO
+### REMOVENDO DUPLICAÇÃO DE CÓDIGO:GET
 
 Dentro de todas as funções que fazem requisições GET, existe uma duplicação de código e essa duplicação pode ser resolvida através de uma função que irá encapsular esse código e pode ser reutilizada em métodos GET.
 
@@ -74,6 +74,45 @@ private void listarAbrigo() {
 }
 
 ```
+
+### REMOVENDO DUPLICAÇÃO DE CÓDIGO:POST
+
+Assim como nos métodos get, nas funções que fazem requisições post,existem duplicações de código e isso precisa ser abstraído.
+
+```java
+
+```
+
+
+listarAbrigo
+cadastrarAbrigo
+listarPets
+cadastrarServices
+
+- String[] Args
+ - INSTANCIA ClientHttpConfiguration 
+
+- PASTA Service
+ - CLASSE AbrigoService(client)
+   - construct{client}
+  - METODO listarAbrigoService()
+  - METODO cadastrarAbrigoService()
+
+ - CLASSE PetsService(client)
+   - construct{client}
+  - METODO listarPetsService()
+  - METODO cadastrarPetsService()
+
+- PASTA Client
+ - CLASSE ClientHttpConfiguration
+   - METODO disparaRequisicaoGet()
+     - INSTANCIA HTTPClient
+   - METODO disparaRequisicaoPost()
+     - INSTANCIA HTTPClient
+ 
+
+
+
 
 
 
